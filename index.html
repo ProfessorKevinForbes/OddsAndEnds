@@ -25,12 +25,21 @@
 
     }
 
+    function dialNumber() {
+	var value = document.getElementById("inputBox").value;
+	var ref = window.open('tel:'+value, '_system');
 
+    }
 
     </script>
   </head>
   <body>
-	<h1>Simple Photo</h1>
-    <button onclick="launchBrowser();">Launch Browser</button> <br>
+	<h1>Odds and Ends</h1>
+    	<button onclick="launchBrowser();">Launch Browser</button> <br>
+
+	<form>
+		Phone Number: <input type="text" id="inputBox">
+	</form>
+        <button onclick="dialNumber();">Dial Number</button>
   </body>
 </html>
