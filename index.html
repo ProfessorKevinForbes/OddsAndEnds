@@ -31,15 +31,31 @@
 
     }
 
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    function alertDismissed() {
+	alert('notification done!');
+    }
+
+
     </script>
   </head>
   <body>
 	<h1>Odds and Ends</h1>
-    	<button onclick="launchBrowser();">Launch Browser</button> <br>
+    	<button onclick="launchBrowser();">Launch Browser</button> <br><br><BR>
 
 	<form>
 		Phone Number: <input type="text" id="inputBox">
 	</form>
-        <button onclick="dialNumber();">Dial Number</button>
+        <button onclick="dialNumber();">Dial Number</button> <br><BR><BR>
+
+	<button onclick="showAlert();">Show Alert</button>
   </body>
 </html>
