@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+	xmlns:android   = "http://schemas.android.com/apk/res/android"
+        id          = "edu.iupui.n300.OddsAndEnds"
+        version     = "1.0.0" >
+
+    <name>Odds And Ends</name>
+
+    <description>
+        Various Test App Stuff.
+    </description>
+
+    <author href="https://github.com/ProfessorKevinForbes/Odds And Ends" email="professorkevinforbes@gmail.com">
+        Kevin Forbes
+    </author>
+
+	<icon src="icon.png" />
+	<gap:splash src="splash.png" />
+
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
+
+
+    <uses-sdk android:minSdkVersion="19"
+              android:targetSdkVersion="19"
+              android:maxSdkVersion="19" />
+
+<feature name="InAppBrowser">
+    <param name="ios-package" value="CDVInAppBrowser" />
+</feature>
+
+<feature name="InAppBrowser">
+    <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+</feature>
+
+<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+
+</widget>

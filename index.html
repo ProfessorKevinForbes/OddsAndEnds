@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capture Photo</title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+ 
+    // Wait for PhoneGap to connect with the device
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    // PhoneGap is ready to be used!
+    //
+    function onDeviceReady() {
+    }
+
+    function launchBrowser() {
+         var ref = window.open('http://google.com', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+
+    }
+
+
+
+    </script>
+  </head>
+  <body>
+	<h1>Simple Photo</h1>
+    <button onclick="launchBrowser();">Launch Browser</button> <br>
+  </body>
+</html>
